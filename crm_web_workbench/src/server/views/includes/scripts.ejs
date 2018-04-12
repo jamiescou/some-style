@@ -1,0 +1,26 @@
+<% if (process.env.NODE_ENV === 'production') {  %>
+
+<!-- jQuery、json3 -->
+<script src="<%= global.cdnHost %>/assets/jquery.min.js"></script>
+<script src="<%= global.cdnHost %>/assets/json3.min.js"></script>
+
+<!-- 每个页面对应的自己的 js -->
+<% if(typeof filename === 'string'){ %>
+<script src="<%= global.cdnHost %>/assets/<%= filename %>.min.js?_=<%= global.fileHash %>"></script>
+<script src="<%= global.cdnHost %>/assets/global.min.js?_=<%= global.fileHash %>"></script>
+<% } %>
+
+<% } else { %>
+
+<!-- jQuery -->
+<script src="<%= global.cdnHost %>/public/lib/jquery-2.1.4.js"></script>
+
+<!-- 每个页面对应的自己的 js -->
+<% if(typeof filename === 'string'){ %>
+<script src="/public/js/<%= filename %>.js"></script>
+<script src="/public/js/global.js"></script>
+<% } %>
+
+<% } %>
+
+

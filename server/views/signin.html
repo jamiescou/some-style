@@ -1,0 +1,53 @@
+<div id="wrap">
+    <%- include('includes/top-bar') %>
+    <div id="main">
+        <div id="content-wrap">
+            <div class="content">
+                <form autocomplete="on">
+                    <h5 class="m-b__30">美洽公司</h5>
+                    <div id="tellphone" class="form-group">
+                        <label>用户名</label>
+                        <input class="form-control" type="text" placeholder="手机号">
+                        <i class="clear hide">
+                            <img src="/public/img/clear.png">
+                        </i>
+                        <div class="warning"></div>
+                    </div>
+                    <div id="password" class="form-group">
+                        <label>密码</label>
+                        <input class="form-control" type="password">
+                        <i class="clear hide">
+                            <img src="/public/img/clear.png">
+                        </i>
+                        <div class="warning"></div>
+                    </div>
+                    <div id="captcha" class="form-group hide">
+                        <label>图形验证码</label>
+                        <input class="form-control" maxlength='5' type="text">
+                        <img id="captchaImg" class="pull-right" src="" alt="获取验证码">
+                        <div class="warning"></div>
+                    </div>
+                    <div class="submit-group">
+                        <button type="button" id="submitBtn" class="l-s__5">登录</button>
+                        <div class="warning t__80"></div>
+                    </div>
+                    <div class="clearfix mt15">
+                        <a class="pull-left" href="./signup" id="signupURL">注册新团队</a>
+                        <a class="pull-right" href="./reset-password">忘记密码了？</a>
+                    </div>
+                </form>
+            </div>
+        </div>                    
+        <div id="signup" class="tc mt24" style="display: block;">
+            <p class="di mr34">还没开通美洽？</p>
+            <a id="signup-link" href="／signup">
+                免费试用
+            </a>
+        </div>
+        <%- include('includes/footer') %>
+    </div>
+    <div id="minor" class="fr shadow-signin">
+        <img src="/public/img/minor.jpg" />
+    </div>
+</div>
+

@@ -1,0 +1,19 @@
+{
+	"name"             : "crm",
+	"args"             : [],
+	"script"           : "src/server/index.js",
+	"interpreter_args" : "--harmony",
+	"log_date_format"  : "YYYY-MM-DD HH:mm:ss Z",
+	"error_file"       : "/data/logs/crm_fontend/crm_fontend.log.wf",
+	"out_file"         : "/data/logs/crm_fontend/crm_fontend.log",
+	"pid_file"         : "/data/logs/crm_fontend/pid.log",
+	"min_uptime"       : "200s",
+	"max_restarts"     : 10,
+	"max_memory_restart": "1500M",
+	"watch"            : false,
+	"ignore_watch"     : ["[\\/\\\\]\\./", "node_modules"],
+	"merge_logs"       : true,
+	"env": {
+		"NODE_ENV": "production"
+	}
+}

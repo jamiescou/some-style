@@ -1,0 +1,15 @@
+dist
+.DS_Store
+.idea
+node-mock/
+node_modules
+npm-debug.log
+.happypack/*
+.vscode/*
+
+config-now.js
+
+test/flow/visuals
+test-results
+test/visuals
+coverage

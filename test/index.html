@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var order = ['{{第一组}}', 'name', 'Company', '{{第二组}}', 'Title', 'Phone', 'Email', 'Department', '{{第三组}}', 'Gender', '{{第四组}}', 'LeadsSource', 'MobilePhone', 'QQ', 'Address', 'WeChat', 'IndustryCategory', 'Industry', 'owner', 'CampaignID', 'PostalCode', 'MechatAccountID', 'AffiliatedDepartment', 'CreatedAt', 'CreatedBy', 'RecommendedBy', 'Status', 'Description', 'updated_by', 'updated_at', 'created_by', 'created_at'];    
+    var reg = /^\{\{\}\}$/;
+    order.forEach(function(v){
+        reg.test(v)
+    })
+        
+        
+    </script>
+    
+</body>
+</html>

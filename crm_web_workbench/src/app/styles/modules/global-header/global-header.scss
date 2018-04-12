@@ -1,0 +1,16 @@
+:global {
+    #global-header {
+        height:60px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 1px 0 0 rgba(52, 63, 75, 0.08);
+        .mcds-tab__items .mcds-list__item {
+            min-width:57px;
+            float: left;
+            flex: initial;
+            width:auto;
+        }
+        a {
+            min-width:initial;
+        }
+    }
+}

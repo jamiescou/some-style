@@ -1,0 +1,6 @@
+doc/
+lib/
+node_modules/
+style/
+test/
+*.MD

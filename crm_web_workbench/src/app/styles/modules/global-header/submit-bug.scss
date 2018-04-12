@@ -1,0 +1,40 @@
+.submit-bug__position {
+    position: fixed;
+    top: 100px;
+    min-height: 470px;
+    width: 300px;
+    z-index: 6000;
+    background: white;
+    right: 0;
+    box-shadow: 0 12px 24px 0 rgba(42, 53, 65, 0.12), 0 0 1px 0 rgba(42, 53, 65, 0.24);
+}
+
+.file-selector {
+	height: 140px;
+	width: 100%;
+}
+
+.delete-icon {
+    background-color: #ffffff;
+    box-shadow: 0 2px 3px 0 rgba(52, 63, 75, 0.18), 0 0 1px 1px rgba(52, 63, 75, 0.06);
+    border-radius: 50%;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    color: #bac1c8;
+    cursor: pointer;
+    line-height: 16px;
+    text-align: center;
+}
+.imageWrapper {
+    position: relative;
+}
+.textareaWarp {
+    :global(.mcds-textarea) {
+        resize: none;
+        height: 150px;
+        width: 259px;    
+    }
+}

@@ -1,0 +1,37 @@
+:global {
+    .complex-select{
+        &__container {
+            width: 300px;
+            height: 32px;
+            border-radius: 3px;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 1px #ccd2e0;
+        }
+        &__type-list{
+            width:52px;
+            & span {
+                & [class^="mcds-icon__"], [class*=" mcds-icon__"] {
+                   color:white;
+                }
+            }
+        }
+        &__type-dropdown {
+            min-width: 122px !important;
+            & .mcds-tile__detail{
+                color: #5a6978;
+            }
+
+        }
+
+        &__input{
+            height:100%;
+            box-shadow: none;
+            outline: none;
+            border: none;
+        }
+
+        &__list-dropdown {
+            width:100%;
+        }
+    }
+}

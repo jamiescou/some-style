@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24.4093333,8 C18.9266667,8 14.3346667,12.4626667 14.3346667,18.0013333 C14.3346667,20.6426667 15.496,23.072 17.1493333,24.8626667 L11,35.568 C13.672,37.1146667 16.7666667,37.9986667 20.0666667,37.9986667 C23.064,37.9986667 25.892,37.2693333 28.3866667,35.9773333 C32.1866667,33.7306667 35.664,29.4653333 35.664,22.1373333 C35.664,17.8533333 34.3453333,14.8693333 32.464,12.1786667 C30.8333333,9.84666667 27.7853333,8 24.4093333,8 Z" id="path-1"></path>
+        <path d="M25.7999878,14.9999993 C25.7999878,14.3371877 26.3367982,13.7999992 26.9999878,13.7999992 C27.6631774,13.7999992 28.1999879,14.3371877 28.1999879,14.9999993 C28.1999879,15.6628109 27.6631774,16.1999993 26.9999878,16.1999993 C26.3367982,16.1999993 25.7999878,15.6628109 25.7999878,14.9999993 Z" id="path-3"></path>
+    </defs>
+    <g id="💎-home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home/signin" transform="translate(-940.000000, -20.000000)">
+            <g id="nav">
+                <g id="logo" transform="translate(940.000000, 20.000000)">
+                    <circle id="circle" fill="#2A3541" cx="20" cy="20" r="20"></circle>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="body" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <path d="M20.1961217,25.1999998 C17.6869805,23.7597382 16,21.3527615 16,18 L24.3999996,18 L20.1961217,25.1999998 Z" id="coracoid" fill="#2A3541"></path>
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="eye" fill="#2A3541" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

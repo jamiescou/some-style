@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<%- include('includes/head') %>
+<body id="body">
+<div id="wrap">
+    <%- include('includes/top-bar') %>
+    <div id="main" class="w100">
+        <div id="content">
+            <form autocomplete="on">
+                <h5 id="signin-title" style="font-size:16px">找回密码</h5>
+                <div class="form-group">
+                    <label>电子邮箱</label>
+                    <input id="tellphone" class="form-control" type="tel">
+                    <i class="clear"></i>
+                </div>
+                <div class="form-group">
+                    <label>验证码</label>
+                    <input id="caphcha" class="form-control" type="text">
+                </div>
+                <div id="captchaHolder" class="clearfix hide">
+                    <div class="form-group captcha pull-left">
+                        <input id="captcha" class="form-control" type="text" placeholder="验证码">
+                    </div>
+                    <img id="captchaImg" class="pull-right" src="" alt="点击刷新验证码">
+                </div>
+                <button id="submitBtn">确认</button>
+            </form>
+        </div>
+        <%- include('includes/footer') %>  
+    </div>
+
+</div>
+<script src="/public/lib/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="/public/js/phone-verify.js"></script>
+</body>
+</html>

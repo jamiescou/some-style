@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<style>
+    body {   
+font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;   
+color: #4f6b72;   
+background: #E6EAE9;   
+}
+* {
+        box-sizing: border-box;
+}
+  
+a {   
+color: #c75f3e;   
+}   
+  
+#mytable {   
+width: 700px;   
+padding: 0;   
+margin: 0;   
+}   
+  
+caption {   
+padding: 0 0 5px 0;   
+width: 700px;   
+font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;   
+text-align: right;   
+}   
+  
+th {   
+font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;   
+color: #4f6b72;   
+border-right: 1px solid #C1DAD7;   
+border-bottom: 1px solid #C1DAD7;   
+border-top: 1px solid #C1DAD7;   
+letter-spacing: 2px;   
+text-transform: uppercase;   
+text-align: left;   
+padding: 6px 6px 6px 12px;   
+background: #CAE8EA  no-repeat;   
+}   
+/*power by www.winshell.cn*/   
+th.nobg {   
+border-top: 0;   
+border-left: 0;   
+border-right: 1px solid #C1DAD7;   
+background: none;   
+}   
+  
+td {   
+border-right: 1px solid #C1DAD7;   
+border-bottom: 1px solid #C1DAD7;   
+background: #fff;   
+font-size:11px;   
+padding: 6px 6px 6px 12px;   
+color: #4f6b72;   
+}   
+/*power by www.winshell.cn*/   
+  
+td.alt {   
+background: #F5FAFA;   
+color: #797268;   
+}   
+  
+th.spec {   
+border-left: 1px solid #C1DAD7;   
+border-top: 0;   
+background: #fff no-repeat;   
+font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;   
+}   
+  
+th.specalt {   
+border-left: 1px solid #C1DAD7;   
+border-top: 0;   
+background: #f5fafa no-repeat;   
+font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;   
+color: #797268;   
+}   
+/*---------for IE 5.x bug*/   
+html>body td{ font-size:11px;}   
+body,td,th {   
+font-family: 宋体, Arial;   
+font-size: 12px;   
+}
+.mcds-input__container input[type='text']{
+    width: 300px;
+}
+
+.hide {
+    display: none;
+}
+#params-left {
+    float:left;
+    width:50%;
+}
+#result-wrap {
+    float: right;
+    width:50%;
+    background: black;
+    color:white;
+    position: absolute;;
+    top:0;
+    bottom:0;
+    right:0;
+    font-size: 14px;
+    padding: 20px;
+}
+#result-wrap textarea {
+    width:100%;
+    background: black;
+    height: 100%;
+    color:white;
+}
+#api-dropdown {
+position: absolute;top:100%;width:100%;
+border:1px solid black;
+border-top:none;
+background: white;
+width: 400px;
+}
+#api-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+#api-dropdown a{
+    width:100%;
+    padding: 10px 3px;
+    display: block;
+}
+#api-dropdown a:hover{
+    background:#f7f7f8;
+}
+</style>
+<div id="params-left" class="container" >
+    <div class="mcds-input__container">
+        <label class="mcds-label">objectName</label>
+        <div class="mcds-form__control" >
+            <input type="text" value="leads" id="objectName" />
+        </div>
+    </div>
+    <div class="mcds-input__container hide">
+        <label class="mcds-label">域名</label>
+        <div class="mcds-form__control" >
+            <input type="text" id="location" style="width: 100%" class="mcds-input" value="54.223.31.140" placeholder="请输入域名" autocomplete="off">
+
+        </div>
+    </div>
+
+    <div class="mcds-input__container hide" style="margin-top:30px;">
+        <label class="mcds-label">端口</label>
+        <div class="mcds-form__control">
+            <input type="text" id="port" class="mcds-input" value="3000" placeholder="请输入域名" autocomplete="off">
+        </div>
+    </div>
+
+    <div class="mcds-input__container" id="api-input__container" style="margin-top:30px;">
+        <label class="mcds-label">接口(点击下拉外层隐藏下拉)</label>
+        <div class="mcds-form__control" style="position: relative;width:300px;">
+            <input type="text" id="api" class="mcds-input" value="api/v1.0/meiqia/leads/meta" placeholder="请输入接口" autocomplete="off">
+             <div id="api-dropdown" class="hide">
+                <ul>
+                    <li>
+                        <a>abc</a>
+                    </li>
+                     <li>
+                        <a>abc</a>
+                    </li>
+                     <li>
+                        <a>abc</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mcds-input__container request_types" style="margin-top:30px;">
+        <label class="mcds-label">请求类型</label>
+        <div>
+            <div>
+                <input type="radio" id="Label1" class="mcds-radio" name="request_type" value="PUT"
+                onClick="ChangeRadio(this)">
+                <label class="mcds-radio__block" for="Label1">PUT</label>
+            </div>
+        </div>
+        <div>
+            <input type="radio" id="Label2" class="mcds-radio" name="request_type" value="GET"
+             onClick="ChangeRadio(this)">
+            <label class="mcds-radio__block" for="Label2">GET</label>
+        </div>
+        <div>
+            <input type="radio" id="Label3" class="mcds-radio" name="request_type" value="DELETE"
+             onClick="ChangeRadio(this)">
+            <label class="mcds-radio__block" for="Label3">DELETE</label>
+        </div>
+        <div>
+            <input type="radio" id="Label4" class="mcds-radio" name="request_type" value="POST" 
+            onClick="ChangeRadio(this)">
+            <label class="mcds-radio__block" for="Label4" >POST</label>
+        </div>
+    </div>
+    <!-- <div class="tab">
+        <button onClick="showTabData()">显示字段数据</button>
+        <div class="tab_data hide" id="tab_data">
+            <p>数据字段</p><button class="addRow">add row</button>
+            <table id="table">
+                <tbody>
+                    <tr>
+                        <td>key</td>
+                        <td>value</td>
+                        <td>操作</td>
+                        <td>类型</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="key" name="key" placeholder="key" /></td>
+                        <td><input type="text" class="value" name="value" placeholder="value" /></td>
+                        <td><button class="delete">删除</button></td>
+                        <td>
+                            <label class="mcds-radio__block">
+                            <input type="radio"  name="item_type" value="string" checked="" />
+                            string
+                            </label>
+                            <label class="mcds-radio__block">
+                            <input type="radio"  name="item_type" value="object" />
+                            object</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+    <div class="json_wrap">
+        <textarea style="width:100%;min-height: 300px; font-size:22px;" id="json_wrap">
+            {
+
+            }
+        </textarea>
+    </div>
+    <button class="submit">submit</button>
+
+</div>
+<div id="result-wrap">
+    <textarea id="textarea">
+        
+    </textarea>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">objectt</h4>
+      </div>
+      <div class="modal-body">
+        <table id="modal-table">
+
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="public/js/notify.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var global = {};
+    var allApis = [
+        {
+            type: 'POST',
+            url: 'api/v1.0/meiqia/{ObjName}/meta',
+            title:'创建 Meta',
+        },
+        {
+            type: 'GET',
+            url: 'api/v1.0/meiqia/{ObjName}/meta',
+            title:'获取 Meta',
+        },
+        {
+            type: 'PUT',
+            url: 'api/v1.0/meiqia/{ObjName}/meta/add',
+            title:'修改 Meta',
+        },
+        {
+            type: 'PUT',
+            url: 'api/v1.0/meiqia/{ObjName}/meta/drop',
+            title:'删除一列',
+        },
+        {
+            type: 'DELETE',
+            url: 'api/v1.0/meiqia/{ObjName}/meta',
+            title:'删除 Meta',
+        },
+        {
+            type: 'GET',
+            url: 'api/v1.0/meiqia/{ObjName}/meta/schema',
+            title:'获取 MetaSchema',
+        },
+        {
+            type: 'GET',
+            url: 'api/v1.0/meiqia/{ObjName}/query/{Params}',
+            title:'查询 Data',
+        },
+        {
+            type: 'GET',
+            url: 'api/v1.0/meiqia/{ObjName}/{ObjectID}',
+            title:'获取指定 Data',
+        },
+        {
+            type: 'POST',
+            url: 'api/v1.0/meiqia/{ObjName}',
+            title:'创建 Data',
+        },
+        {
+            type: 'DELETE',
+            url: 'api/v1.0/meiqia/{ObjName}/${ObjectID}',
+            title:'删除指定data',
+        },
+        {
+            type: 'PUT',
+            url: 'api/v1.0/meiqia/{ObjName}/${ObjectID}',
+            title:'修改指定 Data',
+        },
+        {
+            type: 'POST',
+            url: 'v2/account/get_captacha_token',
+            title:'getCaptachToken',
+        },
+        {
+            type: 'POST',
+            url: 'send_verify_code',
+            title:'verify_code',
+        },
+        {
+            type: 'POST',
+            url: 'send_email',
+            title:'send_email'
+        },
+        {
+            type: 'POST',
+            url: 'captcha',
+            title:'captcha'
+        },
+        {
+            type: 'GET',
+            url: 'captcha/lx7shqJqBTE2SB93PPDj?width=40&height=100',
+            title:'captcha_img'
+        },
+        {
+            type: 'POST',
+            url: 'update_phone',
+            title:'update_phone'
+        }
+    ];
+    function outsideDropDownClick(e) {
+        console.log("event", e);
+        var root = document.getElementById("api-input__container");
+        if (root.contains(e.target) || (e.button && e.button !== 0)) { return; }
+        e.stopPropagation();
+        let dropdown = document.getElementById("api-dropdown");
+        if (!hasClass(dropdown, 'hide')) {
+            addClass(dropdown, 'hide');
+        }
+    }
+    function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
+    function hasClass(obj, className) {
+        return obj.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+    }
+    function _getIdValue(id) {
+        return trimStr(document.getElementById(id).value);
+    }
+    function removeClass(obj, className) {
+        if (hasClass(obj, className)) {
+            let reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+            obj.className = obj.className.replace(reg, ' ');
+        }
+    }
+
+    function addClass(obj, className) {
+        if (hasClass(obj, className)) {
+            return false;
+        }
+
+        if (obj.className === '') {
+            obj.className = className;
+        } else {
+            obj.className += ' ' + className;
+        }
+    }
+
+    function deleteRow(obj) {
+        global.obj = obj;
+        var parents = $(obj).parents();
+        for(var i = 0; i < parents.length; i++) {
+            if(parents[i].nodeName == 'TR') {
+                $(parents[i]).empty();
+            }
+        }
+    }
+    // 获取数据字段的数据
+    function getRowData(){
+        var result = {};
+        var table = document.getElementById("table");
+        var trs = table.getElementsByTagName("tr");
+        for (var i =0; i < trs.length; i++) {
+            var inputs = trs[i].getElementsByTagName("input");
+            console.log("inputs", inputs);
+           
+            var key = $(trs[1]).find(".key").get(0).value;
+            var value = $(trs[1]).find(".value").get(0).value;
+            if(key && value) {
+                result[key] = value;
+            }
+        }
+        console.log("result", result);
+        return result;
+    }
+    function initApiDropdown() {
+        var init = allApis;
+        var html = '<ul>';
+        for (var i = 0; i < init.length; i++) {
+            html += [
+                '<li>',
+                    `<a onClick='selectApis(${i})' title=${init[i].title}>${init[i].type} - ${init[i].url}<span style="float:right;">${init[i].title}</span></a>`,
+                '</li>',
+            ].join('');
+        }
+        html += '</ul>';
+        return html;
+    }
+    function selectApis(index) {
+        var apis = allApis;
+        var ObjectName = document.getElementById("objectName");
+        var ObjectNameValue  = ObjectName.value;
+        var item = allApis[index];
+        var tabData = document.getElementById("tab_data");
+
+        if (item) {
+            var input = document.getElementById('api');
+            input.value = item.url.replace("{ObjName}", ObjectNameValue);
+            var typeString = `input[value="${item.type}"]`;
+            $(typeString).get(0).checked=true; 
+        }
+        if (item.type === 'POST') {
+            if (hasClass(tabData, 'hide')) {
+                removeClass(tabData, 'hide');
+            }
+        }
+        let dropdown = document.getElementById("api-dropdown");
+        if (!hasClass(dropdown, 'hide')) {
+            addClass(dropdown, 'hide');
+        }
+    }
+    // 判断radio post类型
+    function ChangeRadio(that) {
+        console.log("that", that.checked);
+        console.log("that", that.value);
+        var tabData = document.getElementById("tab_data");
+        if (that.checked === true) {
+            if (that.value === 'POST' || that.value === 'PUT' || that.value === 'DELETE') {
+                if (hasClass(tabData, 'hide')) {
+                    removeClass(tabData, 'hide');
+                }
+            }
+        } else {
+            if (!hasClass(tabData, 'hide')) {
+                addClass(tabData, 'hide');
+            }
+        }
+    }
+
+    function showTabData() {
+       var tabData = document.getElementById("tab_data");
+       if (hasClass(tabData, 'hide')) {
+            removeClass(tabData, 'hide');
+        }
+    }
+    $(document).ready(function() {
+        var html = initApiDropdown();
+        $("#api-dropdown").html(html);
+        $( ".addRow" ).click(function() {
+            var Tr = ['<tr>',
+                    '<td><input type="text" class="key" placeholder="key" /></td>',
+                    '<td><input type="text" class="value" placeholder="value" /></td>',
+                    '<td><button class="delete" onClick="deleteRow(this)">删除</button></td>',
+                    '<td>',
+                           ' <label class="mcds-radio__block">',
+                            '<input type="radio"  name="item_type" value="string" checked="" />',
+                            'string',
+                            '</label>',
+                            '<label class="mcds-radio__block">',
+                            '<input type="radio"  name="item_type" value="object" />object</label>',
+                    '</td>',
+               ' </tr>'];
+            var html = Tr.join('');
+            $("#table tbody").append(html);
+        });
+        // api input 获取焦点.显示下拉
+        $("#api").focus(function(){
+            let dropdown = document.getElementById("api-dropdown");
+            if (hasClass(dropdown, 'hide')) {
+                removeClass(dropdown, 'hide');
+            }
+        });
+        // $("#api").blur(function(){
+        //     let dropdown = document.getElementById("api-dropdown");
+        //     if (!hasClass(dropdown, 'hide')) {
+        //         addClass(dropdown, 'hide');
+        //     }
+        // });
+        document.addEventListener('mouseup', function(e){
+            outsideDropDownClick(e);
+        });
+        $(".submit").click(function() {
+            document.getElementById("textarea").value = ''
+            // var result = getRowData();
+            var json_wrap = document.getElementById("json_wrap");
+            var requestType = $(".request_types input[type='radio']:checked").val();
+            var location = _getIdValue("location");
+            var port = _getIdValue("port");
+            var api = _getIdValue("api");
+            var url =  location + ':' + port + '/' + api;
+            console.log("url", url);
+            $.ajax({
+                url: '/backend/' + api,
+                data: requestType != "GET" ? json_wrap.value : null,
+                type: requestType,
+
+                success: function(res){
+                    console.log("success", res);
+                    // document.getElementById("json_wrap").value= "{}";
+                    document.getElementById("textarea").value = JSON.stringify(res,null,8);
+                    $.notify(`${url} 请求成功`, "success");
+                },
+                error: function(err) {
+                    $.notify(`${url} 请求失败`, "error");
+                    document.getElementById("textarea").value = JSON.stringify(err,null,8);
+                    console.log('error', err);
+                }
+            });
+        });
+    });
+
+Date.prototype.setISO8601 = function(dString){
+ 
+var regexp = /(\d\d\d\d)(-)?(\d\d)(-)?(\d\d)(T)?(\d\d)(:)?(\d\d)(:)?(\d\d)(\.\d+)?(Z|([+-])(\d\d)(:)?(\d\d))/;
+ 
+if (dString.toString().match(new RegExp(regexp))) {
+var d = dString.match(new RegExp(regexp));
+var offset = 0;
+ 
+this.setUTCDate(1);
+this.setUTCFullYear(parseInt(d[1],10));
+this.setUTCMonth(parseInt(d[3],10) - 1);
+this.setUTCDate(parseInt(d[5],10));
+this.setUTCHours(parseInt(d[7],10));
+this.setUTCMinutes(parseInt(d[9],10));
+this.setUTCSeconds(parseInt(d[11],10));
+if (d[12])
+this.setUTCMilliseconds(parseFloat(d[12]) * 1000);
+else
+this.setUTCMilliseconds(0);
+if (d[13] != 'Z') {
+offset = (d[15] * 60) + parseInt(d[17],10);
+offset *= ((d[14] == '-') ? -1 : 1);
+this.setTime(this.getTime() - offset * 60 * 1000);
+}
+}
+else {
+this.setTime(Date.parse(dString));
+}
+return this;
+};
+</script>
+<script type="text/javascript" src="http://counter.sina.com.cn/ip/" charset="gb2312"></script>  
+</html>

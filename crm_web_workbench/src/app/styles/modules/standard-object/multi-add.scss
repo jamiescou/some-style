@@ -1,0 +1,63 @@
+.multi-add {
+    &__header-lead {
+        width: 27px;
+        height: 18px;
+        font-size: 13px;
+        color: #2c7cff;
+    }
+    &__header-arrow {
+        width: 14px;
+        height: 14px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    &__header-mylead {
+        width: 53px;
+        height: 18px;
+        font-size: 13px;
+        color: #2c7cff;
+    }
+    &__title {
+        height: 28px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.4;
+        color: #2a3541;
+    }
+    &__btn {
+        font-size: 14px;
+        line-height: 1.29;
+        color: #2c7cff;
+    }
+    &__header-footer {
+        margin-top: 28px;
+    }
+    &__tr {
+        height: 52px;
+    }
+    &__table-wrapper {
+        width: 100%;
+        overflow: scroll;
+        padding-bottom: 10px;
+    }
+    &__table-th-first,
+    &__table-th-last {
+        width: 50px;
+    }
+    &__table-th-require {
+        width: 6px;
+        height: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #e22e3a;
+    }
+    &__table-th {
+        width: 200px;
+    }
+    &__table-th2 {
+        width: 250px;
+    }
+    &__table-th3 {
+        width: 300px;
+    }
+}

@@ -1,0 +1,46 @@
+.vetting-choose__pageheader-logo {
+	transform: scale(1.7);
+    display: inline-block;
+    color: #fff;
+}
+
+.vetting-choose__pageheader-rectangle {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #5a6978;
+    padding: 0;
+    box-shadow: inset 0 0 0 1px rgba(52, 63, 75, 0.06);
+}
+.vetting-choose__pageheader-footer-text {
+    height: 16px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.33;
+    color: #767d85;
+    span {
+        text-decoration:underline;
+        font-weight: 500;
+    }
+}
+
+.vetting-choose__pageheader-crumb {
+    font-size: 12px;
+    line-height: 1.33;
+    color: #767d85;
+}
+
+.vetting-choose__table {
+    table-layout: fixed;
+    margin-bottom: 100px;
+    tr td:first-child,
+    tr th:first-child {
+        padding-left: 50px;
+    }
+}
+.vetting-choose__table-label {
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: 10px;
+}

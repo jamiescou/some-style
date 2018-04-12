@@ -1,0 +1,105 @@
+.base-editor {
+    &__error {
+        border: 1px solid red;
+        height: 32px;
+        padding-left: 12px;
+        border-radius: 4px;
+        &:hover {
+            box-shadow: 0 0 0 1px #ccd2e0, 0 0 5px 0 rgba(44, 124, 255, 0.6);
+        }
+        & & input {
+            height: 30px;
+            border: none;
+            border-bottom: none;
+        }
+         :global {
+            .rrui__select__selected {
+                border: none;
+            }
+            .rrui__select__selected--expanded {}
+            .react-phone-number-input__phone {
+                border-bottom: none;
+            }
+            .react-phone-number-input__country {
+                line-height: 20px !important;
+            }
+            .rrui__select__options {
+                margin-top: 5px;
+                width: 100%;
+                min-width: 60px;
+                border-radius: 3px;
+                left: 0;
+            }
+            .rrui__select__option--focused {
+                background-color: #f4f6f9;
+            }
+            .rrui__select__option:hover {
+                background-color: #f4f6f9;
+            }
+        }
+    }
+    &__phone {
+        border: 1px solid #dadee6;
+        height: 32px;
+        padding-left: 12px;
+        border-radius: 4px;
+        &:hover {
+            border-color: #1589DE;
+            box-shadow: 0 0 0 1px #ccd2e0, 0 0 5px 0 rgba(44, 124, 255, 0.6);
+        }
+        & & input {
+            height: 30px;
+            border: none;
+            border-bottom: none;
+        }
+         :global {
+            .rrui__select__selected {
+                border: none;
+            }
+            .rrui__select__selected--expanded {}
+            .react-phone-number-input__phone {
+                border-bottom: none;
+            }
+            .react-phone-number-input__country {
+                line-height: 20px !important;
+            }
+            .rrui__select__options {
+                margin-top: 5px;
+                width: 100%;
+                min-width: 60px;
+                border-radius: 3px;
+                left: 0;
+            }
+            .rrui__select__option--focused {
+                background-color: #f4f6f9;
+            }
+            .rrui__select__option:hover {
+                background-color: #f4f6f9;
+            }
+        }
+        &__wrap {
+            &:focus {
+                border: 1px solid #1589DE;
+                border-radius: 3px;
+                background-color: #ffffff;
+                box-shadow: 0 0 0 1px #ccd2e0, 0 0 5px 0 rgba(44, 124, 255, 0.6);
+            }
+        }
+    }
+    &__textarea {
+        & textarea {
+            height: 120px;
+        }
+    }
+    &__file {
+        >div>label>span {
+            line-height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            >span {
+                line-height: 20px;
+                vertical-align: text-top;
+            }
+        }
+    }
+}

@@ -1,0 +1,155 @@
+.vet-card {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    border:0;
+    .vet-header {
+        padding: 8px 12px 0;
+        .vet-username {
+            display: inline-block;
+            width: 100px;
+            height: 18px;
+            font-family: AvenirNext;
+            font-size: 13px;
+            color: #2a3541;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            &:hover{
+                width: 100%;
+            } 
+        }
+        .vet-agreest__null {
+            font-size: 12px;
+            color: #767d85;
+        }
+        .vet-agreest__check {
+            font-size: 12px;
+            color: #00ce7d;
+        }
+        .vet-agreest__close {
+            font-size: 12px;
+            color: #e22e3a;
+        }
+        .vet-dateTime {
+            width: 53px;
+            height: 46px;
+            display: flex;
+            flex: 0.4;
+            align-items: flex-end;
+            justify-content: flex-end;
+            font-family: AvenirNext;
+            font-size: 12px;
+            color: #767d85;
+        }
+    }
+}
+
+
+/*头像小组件*/
+
+.vet-avatar {
+    position: relative;
+    text-align: center;
+    overflow: inherit;
+    /*filter: grayscale(1);*/
+    .vet-icon__pos {
+        position: absolute;
+        left: 16px;
+        top: -4px;
+    }
+    img {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+
+
+/*底部线条*/
+
+.vet-line__common {
+    position: absolute;
+    width: 100%;
+    bottom: -2px;
+    .vet-line {
+        height: 2px;
+    }
+    .vet-line__check {
+        background-color: #00ce7d;
+    }
+    .vet-line__close {
+        background-color: #e22e3a;
+    }
+}
+
+
+/*头像小图标*/
+
+.vet-icon__common {
+    .vet-icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: center;
+        line-height: 16px;
+        color: #fff;
+        box-shadow: 0 2px 3px 0 rgba(52, 63, 75, 0.18), 0 0 1px 1px rgba(52, 63, 75, 0.06);
+    }
+    .icon-pos__close {
+        background-color: #e22e3a;
+    }
+    .icon-pos__check {
+        background-color: #00ce7d;
+    }
+}
+
+.vet-Group {
+    // width: 100%;
+    position: relative;
+    border: 0;
+    
+    .vet-header {
+        padding: 8px 12px 0;
+    }
+    .vet-body {
+        padding: 0 12px;
+        &>span {
+            height: 16px;
+            margin-top: 10px;
+            display: inline-block;
+            font-family: PingFangSC;
+            font-size: 12px;
+            line-height: 1.33;
+            color: #767d85;
+        }
+        .vet-manage {
+            width: 40px;
+            height: 18px;
+            font-family: PingFangSC;
+            font-size: 13px;
+            color: #2a3541;
+        }
+        .vet-member {
+            margin-top: 5px;
+            &>span {
+                width: 75px;
+                height: 16px;
+                padding-right: 4px;
+                font-size: 12px;
+            }
+        }
+    }
+    .vet-footer {
+        margin-top: 15px;
+        padding: 0 12px;
+        height: 16px;
+        font-family: PingFangSC;
+        font-size: 12px;
+        line-height: 1.33;
+        color: #2a3541;
+    }
+}
+.position-rel{
+    position: relative;
+}

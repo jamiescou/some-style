@@ -1,0 +1,33 @@
+# 镜像中单独安装了一套 CRM 并且依赖（/root/crm/node_modules）也是安装过了的
+# 跑任务之前先把依赖拷贝过来，然后执行 lint，以后还会有 test ...
+
+image: hub.meiqia.com/fontend/crm:v5
+# 定义 stages
+stages:
+  - install_deps
+#  - lint
+#  - test
+
+#cache:
+#  key: ${CI_BUILD_REF_NAME}
+#  paths:
+#  - node_modules/
+
+# 定义 job
+install_job:
+  stage: install_deps
+  only:
+    - develop
+    - master
+  script:
+    - cp -r /root/crm/node_modules . && npm run lint
+
+#lint_job:
+#  stage: lint
+#  script:
+#    - ls && npm run lint
+
+#test_job:
+#  stage: test
+#  script:
+#    - npm run test

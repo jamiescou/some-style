@@ -1,0 +1,46 @@
+.main {
+    height: 100%;
+    display: flex;
+    background-color: #f6f6f9;
+}
+
+.left {
+    width: 240px;
+    background-color: #fff;
+}
+
+.right {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+.setup-search {
+    width: 200px;
+}
+
+.nav-header {
+    position: relative;
+}
+.setup-index {
+    color: #5a6978;
+    font-weight: normal;
+}
+.arrow-position {
+    position: absolute;
+    color: #bac1c8;
+    left: 10px;
+    top: 14px;
+}
+
+.list span {
+    padding: 0!important;
+}
+
+.list a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 15px;
+    color: #5a6978;
+}

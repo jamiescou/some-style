@@ -1,0 +1,74 @@
+<div id="wrap">
+    <div id="header">
+        <a href="https://meiqia.com"><image src="/public/img/logo-text.svg"></a>
+        <div id="signout">退出登录</div>
+    </div>
+    <div class="invite-modal hide">
+        <div class="invite-modal__dialog">
+            <div class="invite-modal__content">
+                <div class="invite-modal__header">
+                    信息完善
+                    <img class="invite-modal__close" src="public/img/gray-close.svg">
+                </div>
+                <div class="invite-modal__body invite-modal__fill-from">
+                    <p>* 请在登入企业之前完善下面信息，此信息将成为您在该企业中的身份，请认真填写。</p>
+                    <form class="invite-modal__form" autocomplete="on">
+                        <div id="name" class="invite-modal__form-group">
+                            <label><i class="required">*</i>姓名</label>
+                            <input type="text">
+                            <i class="clear clear-invite hide">
+                                <img src="/public/img/clear.png">
+                            </i>
+                            <div class="warning warning-right"></div>
+                        </div>
+                        <div id="email" class="invite-modal__form-group">
+                            <label><i class="required">*</i>企业邮箱</label>
+                            <input type="email" placeholder="例如：xiaoming@qq.com">
+                            <i class="clear clear-invite hide">
+                                <img src="/public/img/clear.png">
+                            </i>
+                            <div class="warning warning-right"></div>
+                        </div>
+                        <div id="tel" class="invite-modal__form-group">
+                            <label>联系电话</label>
+                            <input type="tel">
+                            <i class="clear clear-invite hide">
+                                <img src="/public/img/clear.png">
+                            </i>
+                            <div class="warning warning-right"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="invite-modal__body invite-modal__finish hide">
+                    <p>请尽快到个人信息中验证邮箱，验证可用于找回密码等操作，使您的账户更安全。</p>
+                </div>
+                <div class="invite-modal__footer">
+                    <button id="acceptBtn" class="invite-button__brand">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inviteWrap">
+        <div class="invite-list">
+            <div class="invite-list__header">
+                <span>
+                    <img class="invite-list__header-line" src="public/img/line.svg" />
+                    邀请列表
+                    <div class="invite-list__header-tip hide" ></div>
+                </span>
+            </div>
+            <li class="invite-list__body hide" ></li>
+        </div>
+        <div class="company-list">
+            <div class="company-list__header">
+                <span>
+                    <i class="company-list__header-prefix"></i>
+                    企业列表
+                </span>
+            </div>
+            <li class="company-list__body">
+
+            </li>
+        </div>
+    </div>
+</div>

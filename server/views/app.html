@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <!--[if lt IE 9]>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-shim.min.js'></script>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-sham.min.js'></script>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script>
+        <script src='//cdn.uriit.ru/console-polyfill/index.js'></script>
+        <![endif]-->
+        <meta charset="UTF-8">
+        <title>美洽 - CRM</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <% if (process.env.NODE_ENV === 'production') {  %>
+        <link rel="stylesheet" href="<%= global.cdnHost %>/assets/animate.min.css"></link>
+        <% } else { %>
+        <link rel="stylesheet" href="/public/css/animate.css"></link>
+        <% } %>
+        <% assets.style.forEach(style => { %>
+            <link rel="stylesheet" href="<%= style %>"></link>
+        <% }) %>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+        <div class="browsehappy">
+          你的浏览器太过时了，推荐你去这里<a href="http://browsehappy.com/">升级</a>浏览器。
+        </div>
+        <![endif]-->
+        <div id="App">
+        </div>
+        <script>
+        window.globalApiConfig = <%- JSON.stringify(global.globalApiConfig) %>;
+        </script>
+        <% assets.script.forEach(script => { %>
+        <script src="<%= script %>"></script>
+        <% }) %>
+    </body>
+</html>

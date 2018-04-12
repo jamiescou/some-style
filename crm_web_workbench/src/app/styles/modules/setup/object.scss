@@ -1,0 +1,255 @@
+.index-relative {
+    height: 143px;
+    position: relative;
+    z-index: 5999;
+}
+
+.search-object {
+    width: 240px;
+    position: absolute;
+    top: 20px;
+    right: 146px;
+}
+
+.create-object {
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.create-icon {
+    font-size: 20px;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-gray {
+    background-color: #b4b9c4;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-save {
+    background-color: #fafafb;
+}
+
+.create-filter {
+    background-color: #fafafb;
+    box-shadow: inset 0 0 0 1px rgba(52, 63, 75, 0.08);
+}
+
+.detail-relative {
+    height: 170px;
+    position: relative;
+    z-index: 5999;
+}
+
+.detail-list {
+    li {
+        width: 228px;
+        line-height: 16px;
+        float: left;
+        span {
+            padding-top: 5px!important;
+            padding-bottom: 5px!important;
+        }
+    }
+}
+
+.detail-icon {
+    position: relative;
+    top: 1px;
+}
+
+.text-color {
+    color: #767d85;
+}
+
+.required-color {
+    color: #d0011b;
+}
+
+.border-b__shadow {
+    box-shadow: inset 0 1px 0 0 rgba(52, 63, 75, 0.08), inset 0 -1px 0 0 rgba(52, 63, 75, 0.08);
+}
+
+.detail-field {
+    background: #fff;
+    height: 62px;
+    line-height: 62px;
+    box-shadow: inset 0 -1px 0 0 rgba(52, 63, 75, 0.08)
+}
+
+.font-weight__400 {
+    font-weight: 400;
+}
+
+.font-weight__300 {
+    font-weight: 300;
+}
+
+.margin-top__2 {
+    margin-top: -2px;
+}
+
+.create-field__header {
+    height: 98px;
+}
+
+.create-content {
+    border-radius: 3px;
+    margin-bottom: 85px;
+    box-shadow: 0 12px 24px 0 rgba(42, 53, 65, 0.12), 0 0 1px 0 rgba(42, 53, 65, 0.24);
+}
+
+.create-checkbox {
+    &>div {
+        &:not(:first-child) {
+            margin-left: 81px;
+        }
+        float: left;
+        span:first-child {
+            top: -2px;
+        }
+    }
+}
+
+.create-editor {
+    border-radius: 3px;
+    background-color: #fafafb;
+    box-shadow: inset 0 0 0 1px rgba(52, 63, 75, 0.08);
+}
+
+.create-textarea {
+    textarea {
+        height: 202px;
+    }
+}
+
+.create-func {
+    height: 202px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #dadee6;
+    overflow-y: auto;
+    span {
+        font-size: 12px!important;
+    }
+}
+
+.check-relative {
+    position: relative;
+    .check-text {
+        width: 75%;
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+    .insert-func {
+        width: 55%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.create-type__checkbox {
+    &>div {
+        float: left;
+        &:nth-child(2) {
+            margin-right: 128px;
+        }
+    }
+}
+
+.create-position__checkbox {
+    span:first-child {
+        top: -1px;
+    }
+}
+
+.filter-form__w {
+    width: 100%;
+}
+
+.filter-form__w-3 {
+    width: 32%;
+    float: left;
+}
+
+.filter-form__w-2 {
+    width: 18%;
+    float: left;
+}
+
+.create-shadow__t {
+    box-shadow: inset 0 0 0 1px rgba(52, 63, 75, 0.08);
+}
+
+.create-filter__textarea {
+    width: 50%;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.cascade-delete__icon {
+    position: absolute;
+    top: 6px;
+    right: 20px;
+}
+
+.create-choose__checkbox {
+    &>div {
+        float: left;
+        &:not(:last-child) {
+            margin-right: 80px;
+        }
+    }
+}
+
+.modal-icon__positoin {
+    position: absolute;
+    top: 10px;
+    right: 9px;
+}
+
+.modal-container {
+    &>div:not(:first-child) {
+        margin-left: 20px;
+    }
+    &>div:last-child {
+        padding-right: 20px;
+    }
+}
+
+.modal-choose__w-500 {
+    ul {
+        width: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.field-setting__text-color {
+    color: #5a6978;
+}
+
+.field-setting__flex-table {
+    border-radius: 3px;
+    border:1px solid rgba(52, 63, 75, 0.08);
+    .flex-table__header {
+        background-color: #fafafb;
+        border-bottom:1px solid rgba(52, 63, 75, 0.08);
+    }
+    .flex-table__contain:not(:last-child) {
+        border-bottom:1px solid rgba(52, 63, 75, 0.08);
+    }
+}

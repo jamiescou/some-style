@@ -1,0 +1,70 @@
+*, :after, :before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html,
+body {
+	/*font-family: -apple-system, BlinkMacSystemFont, "AvenirNext-Regular", "Helvetica Neue", "lucida grande", "PingFang HK", "Heiti SC", "Hiragino Sans GB", "Microsoft Yahei", SimHei, "WenQuanYi Micro Hei", "Droid Sans", "Roboto", Helvetica, Tahoma, Arial, "sans-serif";*/
+	font-family: "PingFang SC", "AvenirNext";
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-size: 14px;
+	line-height: 1.42857143;
+}
+body {
+	margin: 0;
+}
+:global {
+	#App {
+		height: 100%;
+	}
+	#container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		min-width: 1280px;
+		overflow-x: auto;
+	}
+	#header {
+		height:61px;
+		& .mcds-list__item{
+			& a{
+				display:block;
+			}
+		}
+	}
+	#main {
+		flex: 1;
+		height: calc(100% - 61px);
+        /*设计图没有padding啊*/
+		padding: 0px;
+        background-color: #f6f6f9;
+		overflow-y: auto;
+
+    }
+	#logo {
+		width: 150px;
+		height: 100%;
+		padding: 20px 28px;
+		color: #2a3541;
+		font-size: 15px;
+		font-weight: 600;
+	}
+	#wrap {
+		height: 100%;
+		border-radius: 3px;
+		background-color: #fafafb;
+		box-shadow: 0 1px 3px 0 rgba(52, 63, 75, 0.08), 0 0 0 1px rgba(52, 63, 75, 0.04);
+	}
+
+	.mcds-list{
+		&>div:not(.mcds-list__item) {
+			margin: 20px 20px 0 20px;
+		}
+	}
+
+}
